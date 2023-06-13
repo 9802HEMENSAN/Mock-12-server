@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
 app.use("/",JobRouter);
 
-app.listen(8012 , async () => {
+app.listen( process.env.PORT , async () => {
     try {
         await connection
         console.log("connected")
